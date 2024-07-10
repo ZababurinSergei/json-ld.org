@@ -1479,7 +1479,7 @@
           location.host,
           // NOTE: using hard-coded path so file can be shared with dev page
           //location.pathname,
-          '/playground/',
+          '/playground/index.html',
           'proxy.php?url=',
           url
         ].join('');

@@ -41,7 +41,7 @@ The Playground
 
 If you would like to play around with JSON-LD markup, you may do so here:
 
-https://json-ld.org/playground/index,html
+https://json-ld.org/playground/index.html
 
 The Specifications
 ------------------
