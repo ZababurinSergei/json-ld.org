@@ -4261,7 +4261,6 @@ input[type="submit"].btn.btn-mini {
 }
 
 #pane-visualized {
-  display: flex;
   min-width: 100%;
   background: white;
   height: 100%;
