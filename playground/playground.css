@@ -94,3 +94,7 @@ html {
 body {
   height: inherit;
 }
+
+.CodeMirror {
+  height: 100%!important;
+}
