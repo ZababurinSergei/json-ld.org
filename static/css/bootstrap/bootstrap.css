@@ -4264,6 +4264,7 @@ input[type="submit"].btn.btn-mini {
   display: flex;
   min-width: 100%;
   background: white;
+  height: 100%;
 }
 
 .tabs-below > .nav-tabs {

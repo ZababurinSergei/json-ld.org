@@ -72,9 +72,25 @@
 }
 
 #markup-container, #output-container {
-  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 #privatekey-koblitz-div .CodeMirror {
   height: 100px;
+}
+
+.tab-content {
+  height: inherit;
+}
+
+html {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  height: inherit;
 }
