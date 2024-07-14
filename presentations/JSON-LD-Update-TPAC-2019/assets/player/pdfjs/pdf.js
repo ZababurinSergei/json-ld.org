@@ -3805,6 +3805,7 @@ var PopupElement = function PopupElementClosure() {
       var contents = this._formatContents(this.contents);
       var title = document.createElement('h1');
       title.textContent = this.title;
+      console.log('dddddddddd-------------------------ddddddd',this)
       this.trigger.addEventListener('click', this._toggle.bind(this));
       this.trigger.addEventListener('mouseover', this._show.bind(this, false));
       this.trigger.addEventListener('mouseout', this._hide.bind(this, false));

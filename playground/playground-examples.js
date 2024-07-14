@@ -13,16 +13,845 @@
     playground.frames = {};
     playground.contexts = {};
 
+
+    /*
+    [
+                {
+                    '@id': '/a/[/r/RelatedTo/,/c/ru/интернет_сайт/n/,/c/ru/сайт/]',
+                    '@type': 'Edge',
+                    'dataset': '/d/wiktionary/en',
+                    'end': {
+                        '@id': '/c/ru/сайт',
+                        '@type': 'Node',
+                        'label': 'сайт',
+                        'language': 'ru',
+                        'term': '/c/ru/сайт'
+                    },
+                    'license': 'cc:by-sa/4.0',
+                    'rel': {
+                        '@id': '/r/RelatedTo',
+                        '@type': 'Relation',
+                        'label': 'RelatedTo'
+                    },
+                    'sources': [
+                        {
+                            '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                            '@type': 'Source',
+                            'contributor': '/s/resource/wiktionary/en',
+                            'process': '/s/process/wikiparsec/2'
+                        }
+                    ],
+                    'start': {
+                        '@id': '/c/ru/интернет_сайт/n',
+                        '@type': 'Node',
+                        'label': 'интернет сайт',
+                        'language': 'ru',
+                        'sense_label': 'n',
+                        'term': '/c/ru/интернет_сайт'
+                    },
+                    'surfaceText': null,
+                    'weight': 1.0
+                }
+                ]
+     */
+    /*
+    'Edges': [{
+            '@id': '/yoga_studio',
+            '@type': 'Edge',
+            'surfaceText': 'Сайт йога студии',
+            'weight': 1.0
+        }]
+     */
     // add the example of a Person
     playground.examples['Person'] = {
         '@context': 'https://zababurinsergei.github.io/DevOps/context.ld.json',
-        '@type': 'Person',
-        'name': 'Jane Doe',
-        'jobTitle': 'Professor',
-        'telephone': '(425) 123-4567',
-        'url': 'http://www.janedoe.com'
+        '@id': '/DevOps',
+        'version': '5.8.1',
+        'edges': [
+            {
+                '@id': '/json-ld.org',
+                '@type': 'Edge',
+                'dataset': '/d/DevOps',
+                'license': 'cc:by-sa/4.0',
+                'surfaceText': 'json-ld.org сайт',
+                'weight': 1.0
+            },
+            {
+                '@id': '/Okuma-Reader',
+                '@type': 'Edge',
+                'dataset': '/d/DevOps',
+                'license': 'cc:by-sa/4.0',
+                'surfaceText': 'Сервис Okuma-Reader',
+                'weight': 1.0
+            },
+            {
+                '@id': '/welcomebook',
+                '@type': 'Edge',
+                'dataset': '/d/DevOps',
+                'license': 'cc:by-sa/4.0',
+                'surfaceText': 'Сервис welcomebook',
+                'weight': 1.0
+            },
+            {
+                '@id': '/checklist',
+                '@type': 'Edge',
+                'dataset': '/d/DevOps',
+                'license': 'cc:by-sa/4.0',
+                'surfaceText': 'Сервис checklist',
+                'weight': 1.0
+            },
+            {
+                '@id': '/yoga_studio',
+                '@type': 'Edge',
+                'dataset': '/d/DevOps',
+                'license': 'cc:by-sa/4.0',
+                'surfaceText': 'Сервис yoga_studio',
+                'url': 'https://github.com/ElenaSidneva/yoga_studio',
+                'weight': 1.0
+            },
+        ],
+        'view': {
+            '@id': '/DevOps',
+            '@type': 'PartialCollectionView'
+        }
     };
 
+    // add the example of a Event
+    playground.examples['Event'] = {
+        '@context': [
+            'https://zababurinsergei.github.io/DevOps/context.ld.json'
+        ],
+        '@id': '/c/ru/сайт',
+        'edges': [
+            {
+                '@id': '/a/[/r/RelatedTo/,/c/ru/интернет_сайт/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/RelatedTo',
+                    '@type': 'Relation',
+                    'label': 'RelatedTo'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/интернет_сайт/n',
+                    '@type': 'Node',
+                    'label': 'интернет сайт',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/интернет_сайт'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/FormOf/,/c/ru/сайта/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/FormOf',
+                    '@type': 'Relation',
+                    'label': 'FormOf'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайта/n',
+                    '@type': 'Node',
+                    'label': 'сайта',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайта'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/RelatedTo/,/c/ru/сайт/n/,/c/en/site/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/en/site',
+                    '@type': 'Node',
+                    'label': 'site',
+                    'language': 'en',
+                    'term': '/c/en/site'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/RelatedTo',
+                    '@type': 'Relation',
+                    'label': 'RelatedTo'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайт/n',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайт'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/FormOf/,/c/ru/сайтами/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/FormOf',
+                    '@type': 'Relation',
+                    'label': 'FormOf'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайтами/n',
+                    '@type': 'Node',
+                    'label': 'сайтами',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайтами'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/FormOf/,/c/ru/сайтом/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/FormOf',
+                    '@type': 'Relation',
+                    'label': 'FormOf'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайтом/n',
+                    '@type': 'Node',
+                    'label': 'сайтом',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайтом'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/HasContext/,/c/ru/сайт/n/,/c/en/biochemistry/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/en/biochemistry',
+                    '@type': 'Node',
+                    'label': 'biochemistry',
+                    'language': 'en',
+                    'term': '/c/en/biochemistry'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/HasContext',
+                    '@type': 'Relation',
+                    'label': 'HasContext'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайт/n',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайт'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/FormOf/,/c/ru/сайте/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/FormOf',
+                    '@type': 'Relation',
+                    'label': 'FormOf'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайте/n',
+                    '@type': 'Node',
+                    'label': 'сайте',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайте'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/Synonym/,/c/ru/интернет_сайт/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/Synonym',
+                    '@type': 'Relation',
+                    'label': 'Synonym'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/интернет_сайт/n',
+                    '@type': 'Node',
+                    'label': 'интернет сайт',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/интернет_сайт'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/FormOf/,/c/ru/сайты/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/FormOf',
+                    '@type': 'Relation',
+                    'label': 'FormOf'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайты/n',
+                    '@type': 'Node',
+                    'label': 'сайты',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайты'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/RelatedTo/,/c/ru/сайт/n/,/c/en/web_site/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/en/web_site',
+                    '@type': 'Node',
+                    'label': 'web site',
+                    'language': 'en',
+                    'term': '/c/en/web_site'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/RelatedTo',
+                    '@type': 'Relation',
+                    'label': 'RelatedTo'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайт/n',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайт'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/ExternalURL/,/c/ru/сайт/,/http://ru.dbpedia.org/resource/Сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/dbpedia/en',
+                'end': {
+                    '@id': 'http://ru.dbpedia.org/resource/Сайт',
+                    '@type': 'Node',
+                    'label': 'Сайт',
+                    'path': '/resource/Сайт',
+                    'site': 'ru.dbpedia.org',
+                    'site_available': true,
+                    'term': 'http://ru.dbpedia.org/resource/Сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/ExternalURL',
+                    '@type': 'Relation',
+                    'label': 'ExternalURL'
+                },
+                'sources': [
+                    {
+                        '@id': '/s/resource/dbpedia/2015/en',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/dbpedia/2015/en'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/EtymologicallyDerivedFrom/,/c/ru/сайт/,/c/en/site/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/en/site',
+                    '@type': 'Node',
+                    'label': 'site',
+                    'language': 'en',
+                    'term': '/c/en/site'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/EtymologicallyDerivedFrom',
+                    '@type': 'Relation',
+                    'label': 'EtymologicallyDerivedFrom'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/FormOf/,/c/ru/сайту/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/FormOf',
+                    '@type': 'Relation',
+                    'label': 'FormOf'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайту/n',
+                    '@type': 'Node',
+                    'label': 'сайту',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайту'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/FormOf/,/c/ru/сайтах/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/FormOf',
+                    '@type': 'Relation',
+                    'label': 'FormOf'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайтах/n',
+                    '@type': 'Node',
+                    'label': 'сайтах',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайтах'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/Synonym/,/c/en/website/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/Synonym',
+                    '@type': 'Relation',
+                    'label': 'Synonym'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/en/website/n',
+                    '@type': 'Node',
+                    'label': 'website',
+                    'language': 'en',
+                    'sense_label': 'n',
+                    'term': '/c/en/website'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/FormOf/,/c/ru/сайтов/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/FormOf',
+                    '@type': 'Relation',
+                    'label': 'FormOf'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайтов/n',
+                    '@type': 'Node',
+                    'label': 'сайтов',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайтов'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/Synonym/,/c/ru/веб_сайт/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/Synonym',
+                    '@type': 'Relation',
+                    'label': 'Synonym'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/веб_сайт/n',
+                    '@type': 'Node',
+                    'label': 'веб сайт',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/веб_сайт'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/Synonym/,/c/ru/сайт/n/,/c/ru/веб_сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/веб_сайт',
+                    '@type': 'Node',
+                    'label': 'веб сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/веб_сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/Synonym',
+                    '@type': 'Relation',
+                    'label': 'Synonym'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайт/n',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайт'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/FormOf/,/c/ru/сайтам/n/,/c/ru/сайт/]',
+                '@type': 'Edge',
+                'dataset': '/d/wiktionary/en',
+                'end': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/FormOf',
+                    '@type': 'Relation',
+                    'label': 'FormOf'
+                },
+                'sources': [
+                    {
+                        '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/wiktionary/en',
+                        'process': '/s/process/wikiparsec/2'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайтам/n',
+                    '@type': 'Node',
+                    'label': 'сайтам',
+                    'language': 'ru',
+                    'sense_label': 'n',
+                    'term': '/c/ru/сайтам'
+                },
+                'surfaceText': null,
+                'weight': 1.0
+            },
+            {
+                '@id': '/a/[/r/Synonym/,/c/ru/сайт/,/c/en/website/]',
+                '@type': 'Edge',
+                'dataset': '/d/dbpedia/en',
+                'end': {
+                    '@id': '/c/en/website',
+                    '@type': 'Node',
+                    'label': 'website',
+                    'language': 'en',
+                    'term': '/c/en/website'
+                },
+                'license': 'cc:by-sa/4.0',
+                'rel': {
+                    '@id': '/r/Synonym',
+                    '@type': 'Relation',
+                    'label': 'Synonym'
+                },
+                'sources': [
+                    {
+                        '@id': '/s/resource/dbpedia/2015/en',
+                        '@type': 'Source',
+                        'contributor': '/s/resource/dbpedia/2015/en'
+                    }
+                ],
+                'start': {
+                    '@id': '/c/ru/сайт',
+                    '@type': 'Node',
+                    'label': 'сайт',
+                    'language': 'ru',
+                    'term': '/c/ru/сайт'
+                },
+                'surfaceText': null,
+                'weight': 0.5
+            }
+        ],
+        'version': '5.8.1',
+        'view': {
+            '@id': '/c/ru/сайт?offset=0&limit=20',
+            '@type': 'PartialCollectionView',
+            'comment': 'There are more results. Follow the \'nextPage\' link for more.',
+            'firstPage': '/c/ru/сайт?offset=0&limit=20',
+            'nextPage': '/c/ru/сайт?offset=20&limit=20',
+            'paginatedProperty': 'edges'
+        }
+    };
+    
     // add the example of a Place
     playground.examples['Place'] = {
         '@context': {
@@ -50,20 +879,6 @@
             'latitude': '40.75',
             'longitude': '73.98'
         }
-    };
-
-    // add the example of a Event
-    playground.examples['Event'] = {
-        '@context': {
-            'ical': 'http://www.w3.org/2002/12/cal/ical#',
-            'xsd': 'http://www.w3.org/2001/XMLSchema#',
-            'ical:dtstart': {
-                '@type': 'xsd:dateTime'
-            }
-        },
-        'ical:summary': 'Lady Gaga Concert',
-        'ical:location': 'New Orleans Arena, New Orleans, Louisiana, USA',
-        'ical:dtstart': '2011-04-09T20:00:00Z'
     };
 
     // add the example of a Product

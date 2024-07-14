@@ -8011,6 +8011,7 @@ var AnnotationLayer = (function AnnotationLayerClosure() {
       };
 
       image.addEventListener('click', function image_clickHandler() {
+        debugger
         toggleAnnotation();
       }, false);
       image.addEventListener('mouseover', function image_mouseOverHandler() {
