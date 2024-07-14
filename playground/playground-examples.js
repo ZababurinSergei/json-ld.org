@@ -13,56 +13,6 @@
     playground.frames = {};
     playground.contexts = {};
 
-
-    /*
-    [
-                {
-                    '@id': '/a/[/r/RelatedTo/,/c/ru/интернет_сайт/n/,/c/ru/сайт/]',
-                    '@type': 'Edge',
-                    'dataset': '/d/wiktionary/en',
-                    'end': {
-                        '@id': '/c/ru/сайт',
-                        '@type': 'Node',
-                        'label': 'сайт',
-                        'language': 'ru',
-                        'term': '/c/ru/сайт'
-                    },
-                    'license': 'cc:by-sa/4.0',
-                    'rel': {
-                        '@id': '/r/RelatedTo',
-                        '@type': 'Relation',
-                        'label': 'RelatedTo'
-                    },
-                    'sources': [
-                        {
-                            '@id': '/and/[/s/process/wikiparsec/2/,/s/resource/wiktionary/en/]',
-                            '@type': 'Source',
-                            'contributor': '/s/resource/wiktionary/en',
-                            'process': '/s/process/wikiparsec/2'
-                        }
-                    ],
-                    'start': {
-                        '@id': '/c/ru/интернет_сайт/n',
-                        '@type': 'Node',
-                        'label': 'интернет сайт',
-                        'language': 'ru',
-                        'sense_label': 'n',
-                        'term': '/c/ru/интернет_сайт'
-                    },
-                    'surfaceText': null,
-                    'weight': 1.0
-                }
-                ]
-     */
-    /*
-    'Edges': [{
-            '@id': '/yoga_studio',
-            '@type': 'Edge',
-            'surfaceText': 'Сайт йога студии',
-            'weight': 1.0
-        }]
-     */
-    // add the example of a Person
     playground.examples['Person'] = {
         '@context': 'https://zababurinsergei.github.io/DevOps/context.ld.json',
         '@id': '/DevOps',
@@ -98,6 +48,7 @@
                 'dataset': '/d/DevOps',
                 'license': 'cc:by-sa/4.0',
                 'surfaceText': 'Сервис checklist',
+                'url': 'https://github.com/ElenaSidneva/yoga_studio',
                 'weight': 1.0
             },
             {

@@ -8,7 +8,6 @@
  * @author Markus Lanthaler
  */
 (function($, CodeMirror, jsonld, Promise){
-    
     // assume nothing
     var window = this,
         console = window.console,
@@ -869,6 +868,7 @@
    * @return the process() promise
    */
     playground.tabSelected = function(evt) {
+        console.log('@@@@@@@@@@@@@@ evt @@@@@@@@@@@@@@@@@', evt);
         var id = playground.activeTab = evt.target.id;
 
         if(['tab-compacted', 'tab-flattened', 'tab-framed',
@@ -1316,7 +1316,7 @@
             });
 
             return xhr;
-        }else{
+        } else {
             var files = {
                     'README.md': {
                         content:
@@ -1605,10 +1605,12 @@
 
     // event handlers
     $(document).ready(function() {
-    // Add custom document loader that uses a context URL map.
+        console.log('-------------- ready -------------------');
+        // Add custom document loader that uses a context URL map.
         var xhrDocumentLoader = jsonld.documentLoaders.xhr();
         // FIXME: add UI to let users control and set context mapping
         jsonld.documentLoader = function(url) {
+            // console.log('-------------- documentLoader -------------------', playground.contextMap)
             if(url in playground.contextMap) {
                 $('#using-context-map').show();
                 var modified = playground.contextMap[url];
@@ -1646,11 +1648,12 @@
             return xhrDocumentLoader(url);
         };
 
+        const buttons = document.body.querySelectorAll('.button');
         // set up buttons to load examples
-        $('.button').each(function() {
-            var button = $(this);
-            button.click(function() {
-                playground.populateWithExample(button.find('span').text());
+        buttons.forEach(item => {
+            item.addEventListener('click', (event) => {
+                const button = event.currentTarget.querySelector('span').textContent
+                playground.populateWithExample(button);
             });
         });
 
@@ -1672,5 +1675,6 @@
             html: true
         });
     });
+
     return playground;
 }).call(this, this.jQuery, this.CodeMirror, this.jsonld, this.Promise);
